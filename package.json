@@ -1,0 +1,21 @@
+{
+  "name": "geojson-filter",
+  "version": "0.1.0",
+  "description": "Return a new GeoJson only whit features wich pass the filter",
+  "main": "src/geojson-filter.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:marcelino-m/geojson-filter.git"
+  },
+  "dependencies": {
+    "feature-filter-geojson": "^1.0.0",
+    "lodash": "^4.17.4"
+  },
+  "keywords": [
+    "geojson",
+    "filter"
+  ],
+  "devDependencies": {},
+  "author": "Marcelo M. A.  <ma.munoz.araya@gmail.com>",
+  "license": "ISC"
+}
