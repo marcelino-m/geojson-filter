@@ -9,7 +9,7 @@ Go to [feature\-filter\-geojson][1] for complete doc about  filter array possibi
 
 ```javascript
 
-const gjfilter = require('./src/geojson-filter.js');
+const gjfilter = require('geojson-filter');
 
 const filter = ["==", "prop0", "value0"];
 
