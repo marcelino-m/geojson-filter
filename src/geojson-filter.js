@@ -1,7 +1,7 @@
 const _  = require('lodash');
 const ff = require('feature-filter-geojson');
 
-var copyGeoJsonMetadata function(geoj) {
+var copyGeoJsonMetadata = function(geoj) {
 
     let features  = geoj.features;
     geoj.features = [];
