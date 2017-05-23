@@ -1,26 +1,19 @@
 const _  = require('lodash');
 const ff = require('feature-filter-geojson');
 
-var copyGeoJsonMetadata = function(geoj) {
-
-    let features  = geoj.features;
-    geoj.features = [];
-
-    let gm =  Object.assign({}, geoj);
-    geoj.features = features;
-
-    return gm;
-}
-
 
 function filter(geoj, filtexp) {
 
-    let gj     = copyGeoJsonMetadata(geoj);
+    // clone geoj  metadata
+    let features  = geoj.features;
+    geoj.features = [];
+    let geojclon  =  Object.assign({}, geoj);
+    geoj.features = features;
+
     let filter = ff(filtexp);
+    geojclon.features = _.filter(geoj.features, filter);
 
-    gj.features = _.filter(geoj.features, filter);
-
-    return gj;
+    return geojclon;
 }
 
 
